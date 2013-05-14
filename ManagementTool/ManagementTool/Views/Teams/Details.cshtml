@@ -1,0 +1,29 @@
+﻿@model ManagementTool.Models.Team
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Team</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CreationTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreationTime)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.TeamID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
